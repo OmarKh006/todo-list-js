@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
+  --max-width: 144rem;
+  --main-width: 50rem;
+
   --font-family: "Josefin Sans", sans-serif;
   --font-weight-400: 400;
   --font-weight-700: 700;
   --font-size-18: 1.8rem;
 
   --active-blue: hsl(220, 98%, 61%);
+  --color-white: #fff;
 
   --bg-color-light: hsl(0, 0%, 98%);
+
   --text-color-light: hsl(235, 19%, 35%);
   --text-color-complete-light: hsl(233, 11%, 84%);
   --text-color-action-light: hsl(234, 39%, 85%);
@@ -54,6 +59,7 @@ body {
   font-size: var(--font-size-18);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color-light);
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -145,4 +151,88 @@ meter {
 /* Remove details summary webkit styles */
 ::-webkit-details-marker {
   display: none;
+}
+
+.main--header {
+  color: var(--color-white);
+  font-weight: var(--font-weight-700);
+  letter-spacing: 1.5rem;
+  font-size: 3.6rem;
+}
+
+.container {
+  padding: 9rem 0;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color-light);
+  background-image: url("./assets/bg-desktop-light.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: var(--main-width);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.TaskInput {
+  &__input {
+    background-color: var(--bg-color-light);
+    width: 100%;
+    padding: 2rem 0;
+    padding-left: 2rem;
+    border-radius: 8px;
+
+    &::placeholder {
+      color: hsl(236, 9%, 66%);
+    }
+  }
+}
+
+.TaskList {
+  margin-top: -2rem;
+  background-color: var(--color-white);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 4px;
+  overflow: hidden;
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: black;
+  }
+
+  &__taskContent {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.8rem 2rem;
+    border-bottom: 1px solid black;
+  }
+
+  &__taskDelete {
+    margin-left: auto;
+  }
+
+  &__actionButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 2rem;
+  }
 }
