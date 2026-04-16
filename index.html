@@ -41,7 +41,7 @@
         </div>
         <div class="TaskList">
           <ul class="TaskList__list">
-            <li class="TaskList__taskContent">
+            <li class="TaskList__taskContent --isCompleted">
               <div class="TaskList__checkbox" tabindex="0" role="button">
                 <img
                   src="./assets/icon-check.svg"
@@ -158,13 +158,15 @@
           </ul>
 
           <div class="TaskList__actionButtons">
-            <span>5 left</span>
-            <div class="actionButtons">
-              <button>All</button>
-              <button>Active</button>
-              <button>Completed</button>
+            <span class="TaskList__notCompleted"
+              ><span class="notCompletedValue">5</span> left</span
+            >
+            <div class="TaskList__navigationButtons">
+              <button class="button selectAll --isActive">All</button>
+              <button class="button selectActive">Active</button>
+              <button class="button selectCompleted">Completed</button>
             </div>
-            <button class="clear">Clear completed</button>
+            <button class="button TaskList__clear">Clear completed</button>
           </div>
         </div>
       </div>

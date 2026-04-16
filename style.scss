@@ -207,6 +207,7 @@ meter {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 4px;
   overflow: hidden;
+
   &__checkbox {
     display: flex;
     justify-content: center;
@@ -214,7 +215,7 @@ meter {
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
-    background-color: black;
+    border: 1px solid var(--text-color-complete-light);
   }
 
   &__taskContent {
@@ -222,11 +223,43 @@ meter {
     align-items: center;
     gap: 2rem;
     padding: 1.8rem 2rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text-color-complete-light);
+
+    &:hover .TaskList__deleteIcon {
+      display: inline-block;
+    }
+
+    &:hover .TaskList__checkbox {
+      border-color: transparent;
+      background:
+        linear-gradient(var(--color-white), var(--color-white)) padding-box,
+        var(--checked-icon-bg) border-box;
+    }
+  }
+
+  &__taskContent {
+    &.--isCompleted {
+      .TaskList__value {
+        color: var(--text-color-action-light);
+        text-decoration: line-through;
+      }
+      .TaskList__checkbox {
+        border: none;
+        background: var(--checked-icon-bg);
+      }
+    }
+  }
+
+  &__value {
+    color: var(--text-color-light);
   }
 
   &__taskDelete {
     margin-left: auto;
+  }
+
+  &__deleteIcon {
+    display: none;
   }
 
   &__actionButtons {
@@ -234,5 +267,41 @@ meter {
     justify-content: space-between;
     align-items: center;
     padding: 1.8rem 2rem;
+  }
+
+  &__notCompleted {
+    font-size: 1.4rem;
+    color: hsl(236, 9%, 66%);
+  }
+
+  &__navigationButtons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: hsl(236, 9%, 66%);
+  }
+
+  &__clear {
+    font-size: 1.6rem;
+    color: hsl(236, 9%, 66%);
+  }
+}
+
+.selectAll.--isActive {
+  color: var(--active-blue);
+}
+
+.selectActive.--isActive {
+  color: var(--active-blue);
+}
+.selectCompleted.--isActive {
+  color: var(--active-blue);
+}
+
+.button:not(.--isActive) {
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--text-color-light);
   }
 }
