@@ -1,0 +1,31 @@
+{
+  "name": "note-app-js",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/OmarKh006/todo-list-js#readme",
+  "bugs": {
+    "url": "https://github.com/OmarKh006/todo-list-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarKh006/todo-list-js.git"
+  },
+  "license": "ISC",
+  "author": "Omar Khairy",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "sortablejs": "^1.15.7",
+    "vite": "^8.0.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.0",
+    "globals": "^17.5.0",
+    "sass": "^1.99.0"
+  }
+}
