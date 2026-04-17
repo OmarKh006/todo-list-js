@@ -21,7 +21,7 @@ var e=(e,t)=>()=>(e&&(t=e(e=0)),t),t=(e,t)=>()=>(t||e((t={exports:{}}).exports,t
                 width="14px"
                 height="14px"
                 class="TaskList__deleteIcon"
-                src="./public/assets/icon-cross.svg"
+                src="./assets/icon-cross.svg"
                 alt="x icon"
             />
         </div>
@@ -49,12 +49,12 @@ var e=(e,t)=>()=>(e&&(t=e(e=0)),t),t=(e,t)=>()=>(t||e((t={exports:{}}).exports,t
                 width="14px"
                 height="14px"
                 class="TaskList__deleteIcon"
-                src="./public/assets/icon-cross.svg"
+                src="./assets/icon-cross.svg"
                 alt="x icon"
             />
         </div>
     </li>
-    `}),Ot.innerHTML=t,en()}})),Jt,Yt=e((()=>{$(),Jt=e=>{Et.src=e?`./public/assets/icon-sun.svg`:`./public/assets/icon-moon.svg`}})),Xt,Zt=e((()=>{$(),zt(),Yt(),Xt=()=>{Dt?.classList.toggle(`--isDark`);let e=Dt?.classList.contains(`--isDark`);Rt(`isDark`,e),Jt(e)}})),Qt,$t=e((()=>{Lt(),rn(),zt(),Qt=e=>{let t=It(`tasks`);t[e].isCompleted=!t[e].isCompleted,Rt(`tasks`,t),nn(t)}})),en,tn=e((()=>{Vt(),$(),Lt(),Ut(),Gt(),qt(),rn(),Zt(),$t(),Et?.addEventListener(`click`,()=>{Xt()}),At?.addEventListener(`click`,e=>{e.preventDefault();let t=kt.value;t.trim()?Ht(t):alert(`Please Enter a task!`),kt.value=``}),en=()=>{Pt().forEach((e,t)=>{e.addEventListener(`click`,e=>{Qt(t),e.currentTarget.parentElement.classList.toggle(`--isCompleted`)})}),Nt().forEach((e,t)=>{e.addEventListener(`click`,()=>{Bt({index:t})})})},jt?.forEach(e=>{e.addEventListener(`click`,e=>{jt.forEach(e=>e.classList.remove(`--isActive`)),e.currentTarget.classList.add(`--isActive`);let t=e.currentTarget.dataset.filter,n=It(`tasks`)||[];t===`all`?nn(n):t===`active`?Wt(n):t===`completed`?Kt(n):t===`clear`&&Bt({flag:`clearCompleted`})})})})),nn,rn=e((()=>{$(),tn(),nn=e=>{let t=``,n=0;e.forEach(e=>{e.isCompleted||n++,t+=`
+    `}),Ot.innerHTML=t,en()}})),Jt,Yt=e((()=>{$(),Jt=e=>{Et.src=e?`./assets/icon-sun.svg`:`./assets/icon-moon.svg`}})),Xt,Zt=e((()=>{$(),zt(),Yt(),Xt=()=>{Dt?.classList.toggle(`--isDark`);let e=Dt?.classList.contains(`--isDark`);Rt(`isDark`,e),Jt(e)}})),Qt,$t=e((()=>{Lt(),rn(),zt(),Qt=e=>{let t=It(`tasks`);t[e].isCompleted=!t[e].isCompleted,Rt(`tasks`,t),nn(t)}})),en,tn=e((()=>{Vt(),$(),Lt(),Ut(),Gt(),qt(),rn(),Zt(),$t(),Et?.addEventListener(`click`,()=>{Xt()}),At?.addEventListener(`click`,e=>{e.preventDefault();let t=kt.value;t.trim()?Ht(t):alert(`Please Enter a task!`),kt.value=``}),en=()=>{Pt().forEach((e,t)=>{e.addEventListener(`click`,e=>{Qt(t),e.currentTarget.parentElement.classList.toggle(`--isCompleted`)})}),Nt().forEach((e,t)=>{e.addEventListener(`click`,()=>{Bt({index:t})})})},jt?.forEach(e=>{e.addEventListener(`click`,e=>{jt.forEach(e=>e.classList.remove(`--isActive`)),e.currentTarget.classList.add(`--isActive`);let t=e.currentTarget.dataset.filter,n=It(`tasks`)||[];t===`all`?nn(n):t===`active`?Wt(n):t===`completed`?Kt(n):t===`clear`&&Bt({flag:`clearCompleted`})})})})),nn,rn=e((()=>{$(),tn(),nn=e=>{let t=``,n=0;e.forEach(e=>{e.isCompleted||n++,t+=`
     <li class="TaskList__taskContent ${e.isCompleted?`--isCompleted`:``}">
         <div class="TaskList__checkbox" tabindex="0" role="button">
             <svg
@@ -77,7 +77,7 @@ var e=(e,t)=>()=>(e&&(t=e(e=0)),t),t=(e,t)=>()=>(t||e((t={exports:{}}).exports,t
                 width="14px"
                 height="14px"
                 class="TaskList__deleteIcon"
-                src="./public/assets/icon-cross.svg"
+                src="./assets/icon-cross.svg"
                 alt="x icon"
             />
         </div>
