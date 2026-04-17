@@ -1,7 +1,9 @@
+import { deleteTask } from "./deleteTask";
 import {
   addTaskButton,
   buttons,
   getCheckboxes,
+  getDeleteButtons,
   inputField,
   toggleThemeIcon,
 } from "./elements";
@@ -35,6 +37,12 @@ export const renderEventListeners = () => {
       e.currentTarget.parentElement.classList.toggle("--isCompleted");
     });
   });
+
+  getDeleteButtons().forEach((button, index) => {
+    button.addEventListener("click", () => {
+      deleteTask({ index });
+    });
+  });
 };
 
 buttons?.forEach((button) => {
@@ -52,6 +60,8 @@ buttons?.forEach((button) => {
       renderActiveTasks(tasks);
     } else if (filter === "completed") {
       renderCompletedTasks(tasks);
+    } else if (filter === "clear") {
+      deleteTask({ flag: "clearCompleted" });
     }
   });
 });
