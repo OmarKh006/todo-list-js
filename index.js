@@ -1,6 +1,4 @@
-import { toggleThemeIcon } from "./scripts/elements";
-import { toggleDarkMode } from "./scripts/toggleDarkmode";
+import { onStartup } from "./scripts/onStartup";
+import "./scripts/eventListeners";
 
-toggleThemeIcon?.addEventListener("click", () => {
-  toggleDarkMode();
-});
+onStartup();
