@@ -5,3 +5,5 @@ export const inputField = document.querySelector(".TaskInput__input");
 export const addTaskButton = document.querySelector(".TaskInput__button");
 export const getDeleteButtons = () =>
   document.querySelectorAll(".TaskList__deleteIcon");
+
+export const taskValue = () => document.querySelectorAll(".TaskList__value");

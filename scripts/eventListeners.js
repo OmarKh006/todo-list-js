@@ -14,4 +14,5 @@ addTaskButton?.addEventListener("click", (e) => {
   } else {
     alert("Please Enter a task!");
   }
+  inputField.value = "";
 });
