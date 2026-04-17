@@ -208,6 +208,14 @@ meter {
   }
 }
 
+.activeTask {
+  pointer-events: none;
+}
+
+.doneTask {
+  pointer-events: none;
+}
+
 .main.--isDark .TaskList {
   background-color: var(--color-dark);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

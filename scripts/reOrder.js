@@ -4,7 +4,7 @@ import { saveToDB } from "./saveToDB";
 export const reOrder = () => {
   const tasks = [...Tasks.children].map((li, index) => ({
     value: taskValue()[index].textContent.trim(),
-    isComplete: li.classList.contains("TaskList__taskContent--isActive"),
+    isCompleted: li.classList.contains("--isCompleted"),
   }));
 
   saveToDB("tasks", tasks);

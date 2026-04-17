@@ -1,15 +1,13 @@
-import { notCompletedNumber, Tasks } from "./elements";
+import { Tasks } from "./elements";
 import { renderEventListeners } from "./eventListeners";
 
-export const renderTasks = (tasks) => {
+export const renderCompletedTasks = (tasks) => {
   let taskList = "";
-  let counter = 0;
+  const activeTasks = tasks.filter((task) => task.isCompleted);
 
-  tasks.forEach((task) => {
-    if (!task.isCompleted) counter++;
-
+  activeTasks.forEach((task) => {
     taskList += `
-    <li class="TaskList__taskContent ${task.isCompleted ? "--isCompleted" : ""}">
+    <li class="TaskList__taskContent --isCompleted doneTask">
         <div class="TaskList__checkbox" tabindex="0" role="button">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +38,5 @@ export const renderTasks = (tasks) => {
   });
 
   Tasks.innerHTML = taskList;
-  notCompletedNumber.textContent = counter;
   renderEventListeners();
 };
